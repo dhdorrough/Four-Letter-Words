@@ -1,7 +1,7 @@
 object frm4LetterWordsMain: Tfrm4LetterWordsMain
   Left = 932
   Top = 237
-  Width = 844
+  Width = 387
   Height = 676
   Caption = 'Four Letter Words'
   Color = clBtnFace
@@ -14,25 +14,27 @@ object frm4LetterWordsMain: Tfrm4LetterWordsMain
   OldCreateOrder = False
   Position = poScreenCenter
   DesignSize = (
-    828
-    618)
+    371
+    617)
   PixelsPerInch = 96
   TextHeight = 13
   object lblStatus: TLabel
-    Left = 24
-    Top = 584
+    Left = 16
+    Top = 591
     Width = 40
     Height = 13
     Anchors = [akLeft, akBottom]
     Caption = 'lblStatus'
   end
   object lblResults: TLabel
-    Left = 87
-    Top = 516
-    Width = 45
-    Height = 13
-    Anchors = [akLeft, akBottom]
+    Left = 15
+    Top = 556
+    Width = 345
+    Height = 28
+    Anchors = [akLeft, akRight, akBottom]
+    AutoSize = False
     Caption = 'lblResults'
+    WordWrap = True
   end
   object leSrcWord: TLabeledEdit
     Left = 16
@@ -61,7 +63,7 @@ object frm4LetterWordsMain: Tfrm4LetterWordsMain
   object StringGrid1: TStringGrid
     Left = 16
     Top = 56
-    Width = 377
+    Width = 334
     Height = 457
     Anchors = [akLeft, akTop, akRight, akBottom]
     ColCount = 3
@@ -70,8 +72,8 @@ object frm4LetterWordsMain: Tfrm4LetterWordsMain
     TabOrder = 2
   end
   object MainMenu1: TMainMenu
-    Left = 592
-    Top = 16
+    Left = 328
+    Top = 8
     object File1: TMenuItem
       Caption = '&File'
       object New1: TMenuItem

@@ -7,7 +7,6 @@ uses
   Dialogs, Menus, StdCtrls, ExtCtrls, Grids;
 
 const
-  FOUR_LETTER_WORDS_FILENAME = '\\GAMER\Projects2\Four Letter Words\words4.txt';
   MAX_PATH_LEN = 100;
 
 type
@@ -112,6 +111,7 @@ type
     fWordMatrix: TWordMatrix;
     fWordsInProcess: TWordList;
     fShortestPathList: TWordList;
+    fFourLetterWordsFileName: string;
     procedure LoadWordMatrix;
     procedure ClearList(List: TWordList); 
     function FindSimilarWords(const aWord, TargetWord: string; SimilarWords: TWordList): single;
@@ -173,7 +173,7 @@ begin
         for ch4 := 'a' to 'z' do
           fWordMatrix[ch1, ch2, ch3, ch4] := false;
 
-  AssignFile(InFile, FOUR_LETTER_WORDS_FILENAME);
+  AssignFile(InFile, fFourLetterWordsFileName);
   Reset(InFile);
   fNrRead := 0;
   try
@@ -198,6 +198,7 @@ constructor Tfrm4LetterWordsMain.Create(aOwner: TComponent);
 begin
   inherited;
   gRootPath := ExtractFilePath(ParamStr(0));
+  fFourLetterWordsFileName := gRootPath + 'words4.txt';
   LoadWordMatrix;
 end;
 

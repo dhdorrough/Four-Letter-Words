@@ -1,8 +1,6 @@
 program FourLetterWords;
 
 uses
-//  FastMM4,
-  ExceptionLog,
   Forms,
   FourLetterWordsMain in 'FourLetterWordsMain.pas' {frm4LetterWordsMain},
   ExtractSubset in 'ExtractSubset.pas' {frmExtractSubset},
